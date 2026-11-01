@@ -54,6 +54,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid #C9B8FF;outline-offset:3
 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><circle cx="14" cy="14" r="12" stroke="#AEB6C6" stroke-width="1.6"></circle><path d="M14 2 L24.39 20 L3.61 20 Z" stroke="#AEB6C6" stroke-width="1.6" stroke-linejoin="round"></path><circle cx="14" cy="14" r="2.6" fill="#FFFFFF"></circle></svg>
 The Peace Papers</a>
 <div style="display: flex; flex-wrap: wrap; gap: 0 24px; font-size: 14px">
+<a href="#witness" style="display: inline-flex; align-items: center; min-height: 44px; color: #C3C8D6; text-decoration: none">Begin</a>
 <a href="#essays" style="display: inline-flex; align-items: center; min-height: 44px; color: #C3C8D6; text-decoration: none">Essays</a>
 <a href="#centre" style="display: inline-flex; align-items: center; min-height: 44px; color: #C3C8D6; text-decoration: none">The centre</a>
 <a href="#how-to-read" style="display: inline-flex; align-items: center; min-height: 44px; color: #C3C8D6; text-decoration: none">How to read</a>
@@ -71,9 +72,151 @@ The Peace Papers</a>
 <div aria-hidden="true" style="width: 160px; height: 3px; margin-top: 24px; border-radius: 3px; background: linear-gradient(90deg, #E5484D, #F76B15, #FFC53D, #46A758, #0090FF, #8E5CF0)"></div>
 <p style="margin: 24px 0 0; max-width: 680px; font-size: 18px; line-height: 1.65; color: #A3A9BC">Consciousness, empathy and compassion, paradox, the norms families and cultures pass on, a protocol to test one of its claims, and peace among all conscious beings, with artificial intelligence as the mirror: six papers that each stand alone, and one framework beneath them.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px">
-<a href="#essays" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #6A4CF0; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">Read the essays</a>
-<a href="#centre" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: #E8EAF2; text-decoration: none; font-weight: 600; font-size: 15px">Enter the centre <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a>
+<a href="#witness" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #6A4CF0; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">Begin with one minute</a>
+<a href="#essays" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: #E8EAF2; text-decoration: none; font-weight: 600; font-size: 15px">Read the essays</a>
 </div>
+</section>
+
+<section id="witness" aria-labelledby="witness-title" class="ew">
+<style>
+.ew{max-width:1120px;margin:0 auto;padding:16px 20px 40px}
+.ew-card{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;padding:28px;border-radius:18px;background:#11151F;border:1px solid rgba(201,184,255,0.22)}
+@media (min-width:860px){.ew-card{grid-template-columns:minmax(280px,400px) minmax(0,1fr);align-items:center;gap:48px;padding:40px}}
+.ew-fig{margin:0}
+.ew-fig svg{display:block;width:100%;max-width:400px;height:auto;margin:0 auto}
+.ew-frames{transform-box:view-box;transform-origin:50% 50%}
+@media (prefers-reduced-motion:no-preference){.ew-fig.ew-open .ew-frames{animation:ew-aperture 9s ease-in-out infinite}}
+@keyframes ew-aperture{0%,100%{transform:scale(1)}50%{transform:scale(.55)}}
+.ew-eyebrow{margin:0 0 14px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#8A90A6}
+.ew h2{margin:0;font-family:'Space Grotesk',Inter,sans-serif;font-weight:600;font-size:clamp(28px,3.6vw,40px);line-height:1.15;color:#F4F5FA}
+.ew-lede{margin:12px 0 0;font-size:17px;line-height:1.65;color:#C3C8D6}
+.ew blockquote{margin:22px 0 0;padding:2px 0 2px 18px;border-left:2px solid #C9B8FF;font-family:'Space Grotesk',Inter,sans-serif;font-weight:500;font-size:clamp(19px,2.2vw,22px);line-height:1.5;color:#F4F5FA}
+.ew blockquote span{display:block}
+.ew blockquote span+span{margin-top:8px}
+.ew-timer{margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.ew-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border:0;border-radius:999px;background:#6A4CF0;color:#FFFFFF;font:600 15px Inter,system-ui,sans-serif;text-decoration:none;cursor:pointer;font-variant-numeric:tabular-nums}
+.ew-btn:hover{color:#FFFFFF;background:#7A5EF4}
+.ew-note{font-size:13px;line-height:1.5;color:#8A90A6}
+.ew-q{margin:26px 0 0;font-size:16px;line-height:1.55;color:#E8EAF2}
+.ew-answers{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.ew-answer{min-height:44px;padding:0 20px;border-radius:999px;border:1px solid rgba(255,255,255,0.18);background:transparent;color:#E8EAF2;font:500 14px Inter,system-ui,sans-serif;cursor:pointer}
+.ew-answer[aria-pressed="true"]{border-color:#C9B8FF;background:rgba(201,184,255,0.12);color:#F4F5FA}
+.ew button:focus-visible{outline:2px solid #C9B8FF;outline-offset:3px}
+.ew-reveal{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08)}
+.ew-reveal p{margin:0 0 12px;font-size:15.5px;line-height:1.7;color:#B7BDCC}
+.ew-reveal p.ew-own{color:#E8EAF2}
+@media (prefers-reduced-motion:no-preference){.ew-reveal:not([hidden]){animation:ew-fade .8s ease-out}}
+@keyframes ew-fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.ew-small{margin:22px 0 0;font-size:12.5px;line-height:1.6;color:#8A90A6}
+</style>
+<p class="ew-eyebrow">Begin here · one minute</p>
+<div class="ew-card">
+<figure class="ew-fig">
+<svg viewBox="0 0 400 400" role="img" aria-labelledby="ew-fig-title">
+<title id="ew-fig-title">Three equilateral triangles on a dark ground, each inside a circle through its corners, each pair half the size of the one around it and fainter, every smaller circle touching the sides of the triangle around it; at the centre, one small white point of light in a soft grey glow.</title>
+<defs><radialGradient id="ew-glow"><stop offset="0" stop-color="#C8CDDC" stop-opacity=".42"></stop><stop offset=".6" stop-color="#7E8496" stop-opacity=".28"></stop><stop offset="1" stop-color="#7E8496" stop-opacity="0"></stop></radialGradient></defs>
+<g class="ew-frames" fill="none" stroke="#AEB6C6" stroke-linejoin="round">
+<g stroke-width="3"><circle cx="200" cy="200" r="150" vector-effect="non-scaling-stroke"></circle><path d="M200 50 L329.9 275 L70.1 275 Z" vector-effect="non-scaling-stroke"></path></g>
+<g stroke-width="2.6" stroke-opacity=".62"><circle cx="200" cy="200" r="75" vector-effect="non-scaling-stroke"></circle><path d="M200 125 L264.95 237.5 L135.05 237.5 Z" vector-effect="non-scaling-stroke"></path></g>
+<g stroke-width="2.2" stroke-opacity=".4"><circle cx="200" cy="200" r="37.5" vector-effect="non-scaling-stroke"></circle><path d="M200 162.5 L232.48 218.75 L167.52 218.75 Z" vector-effect="non-scaling-stroke"></path></g>
+</g>
+<circle cx="200" cy="200" r="20" fill="url(#ew-glow)"></circle>
+<circle cx="200" cy="200" r="8.5" fill="#FFFFFF"></circle>
+</svg>
+</figure>
+<div>
+<h2 id="witness-title">The eye of the witness</h2>
+<p class="ew-lede">Before the papers, one minute with this drawing. Nothing you choose here is recorded, and there is nothing to get right.</p>
+<blockquote>
+<span>“Look at the point at the centre.</span>
+<span>Close your eyes, and let whatever you feel or think come as large or as small as it comes.</span>
+<span>Notice whether what is looking grows or shrinks with it.”</span>
+</blockquote>
+<div class="ew-timer" data-ew-js hidden>
+<button type="button" class="ew-btn ew-start" aria-pressed="false">Start the minute</button>
+<span class="ew-note">A soft tone sounds when the minute is up.</span>
+</div>
+<p class="ew-note ew-status" role="status" aria-live="polite"></p>
+<p class="ew-q" id="ew-q">Did what was looking change in size with what it looked at?</p>
+<div class="ew-answers" role="group" aria-labelledby="ew-q">
+<button type="button" class="ew-answer" aria-pressed="false">Yes</button>
+<button type="button" class="ew-answer" aria-pressed="false">No</button>
+<button type="button" class="ew-answer" aria-pressed="false">Unsure</button>
+</div>
+<div class="ew-reveal" aria-live="polite">
+<p class="ew-own">What you noticed is your own report (Experienced).</p>
+<p>The frames change size and the point does not. The point is the singularity, π brought to a point in one person. The rings around it make the eye, I3, and the frames open and close like a camera’s aperture, with how present the witness is. It is an image, not evidence (Interpretive).</p>
+<p>The papers map what the minute points to, and how each part of it could be tested.</p>
+<a class="ew-btn" href="#up-title">Now the papers</a>
+</div>
+<p class="ew-small">From the closing step of the experiential test in paper I (website version), offered here as a demonstration, not as the test. The script was worded by the AI drafting partner, Claude (Anthropic).</p>
+</div>
+</div>
+<script>
+(function () {
+  var root = document.getElementById('witness');
+  if (!root) return;
+  var fig = root.querySelector('.ew-fig');
+  var reveal = root.querySelector('.ew-reveal');
+  var status = root.querySelector('.ew-status');
+  var start = root.querySelector('.ew-start');
+  reveal.hidden = true;
+  root.querySelectorAll('[data-ew-js]').forEach(function (el) { el.hidden = false; });
+
+  var timer = null, end = 0, ctx = null;
+  var idle = start.textContent;
+  function clock(s) { return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
+  function unlockAudio() {
+    try {
+      var C = window.AudioContext || window.webkitAudioContext;
+      if (!C) return;
+      if (!ctx) ctx = new C();
+      if (ctx.state === 'suspended') ctx.resume();
+    } catch (e) { ctx = null; }
+  }
+  function chime() {
+    try {
+      if (!ctx) return;
+      var t = ctx.currentTime, o = ctx.createOscillator(), g = ctx.createGain();
+      o.type = 'sine'; o.frequency.value = 528;
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(0.08, t + 0.5);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 3);
+      o.connect(g); g.connect(ctx.destination);
+      o.start(t); o.stop(t + 3.1);
+    } catch (e) {}
+  }
+  function stop(done) {
+    clearInterval(timer); timer = null;
+    start.setAttribute('aria-pressed', 'false');
+    start.textContent = done ? 'Start again' : idle;
+    status.textContent = done ? 'The minute is up. Open your eyes when you are ready.' : '';
+  }
+  function tick() {
+    var left = Math.max(0, Math.ceil((end - Date.now()) / 1000));
+    start.textContent = 'Eyes closed · ' + clock(left) + ' · tap to stop';
+    if (left <= 0) {
+      stop(true); chime();
+      if (navigator.vibrate) navigator.vibrate([120, 80, 120]);
+    }
+  }
+  start.addEventListener('click', function () {
+    if (timer) { stop(false); return; }
+    unlockAudio();
+    end = Date.now() + 60000;
+    start.setAttribute('aria-pressed', 'true');
+    status.textContent = 'The minute has started.';
+    tick(); timer = setInterval(tick, 250);
+  });
+  root.querySelectorAll('.ew-answer').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      root.querySelectorAll('.ew-answer').forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+      reveal.hidden = false;
+      fig.classList.add('ew-open');
+    });
+  });
+})();
+</script>
 </section>
 
 <section aria-label="The all and the many" style="max-width: 1240px; margin: 0 auto; padding: 8px 20px 0">
@@ -86,7 +229,7 @@ The Peace Papers</a>
 </section>
 
 <section aria-labelledby="up-title" style="max-width: 1120px; margin: 0 auto; padding: 64px 20px 0">
-<p style="margin: 0 0 14px; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A90A6">Start here</p>
+<p style="margin: 0 0 14px; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A90A6">The papers start here</p>
 <article style="display: flex; flex-wrap: wrap; gap: 20px 40px; padding: 28px; border-radius: 18px; background: #11151F; border: 1px solid rgba(201,184,255,0.22)">
 <div style="flex: 1 1 220px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
 <svg width="44" height="44" viewBox="0 0 28 28" fill="none" aria-hidden="true"><circle cx="14" cy="14" r="12" stroke="#C9B8FF" stroke-width="1.4"></circle><path d="M14 2 L24.39 20 L3.61 20 Z" stroke="#C9B8FF" stroke-width="1.4" stroke-linejoin="round"></path><circle cx="14" cy="14" r="2.4" fill="#FFFFFF"></circle></svg>
