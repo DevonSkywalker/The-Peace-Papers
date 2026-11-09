@@ -126,7 +126,20 @@ The Peace Papers</a>
 <circle cx="200" cy="200" r="20" fill="url(#ew-glow)"></circle>
 <circle cx="200" cy="200" r="8.5" fill="#FFFFFF"></circle>
 </svg>
-<div id="ec" style="margin: 18px auto 0; max-width: 400px">
+</figure>
+<div>
+<h2 id="witness-title">The eye of the witness</h2>
+<p class="ew-lede">Before the papers, one minute with this drawing. Nothing you choose here is recorded, and there is nothing to get right.</p>
+<blockquote>
+<span>“Look at the point at the centre.</span>
+<span>Close your eyes, and let your attention rest where the point was.</span>
+<span>Whenever you notice you have been carried off by a feeling or a thought, come back to the centre.”</span>
+</blockquote>
+<div class="ew-timer" data-ew-js hidden>
+<button type="button" class="ew-btn ew-start" aria-pressed="false">Start the minute</button>
+<span class="ew-note">A soft tone sounds when the minute is up.</span>
+</div>
+<div id="ec" style="margin: 20px 0 0; max-width: 400px">
 <p style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A90A6">Interactive version</p>
 <div style="position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.10); background: #06060b">
 <canvas id="ec-c" style="display: block; width: 100%; aspect-ratio: 1 / 1; touch-action: none; cursor: ns-resize" aria-label="The same drawing, alive: inside the point of light the figure appears again, without end. Drag up or down, or pinch, to go in or out."></canvas>
@@ -202,19 +215,6 @@ The Peace Papers</a>
   if (reduce) { render(performance.now()); }
 })();
 </script>
-</figure>
-<div>
-<h2 id="witness-title">The eye of the witness</h2>
-<p class="ew-lede">Before the papers, one minute with this drawing. Nothing you choose here is recorded, and there is nothing to get right.</p>
-<blockquote>
-<span>“Look at the point at the centre.</span>
-<span>Close your eyes, and let your attention rest where the point was.</span>
-<span>Whenever you notice you have been carried off by a feeling or a thought, come back to the centre.”</span>
-</blockquote>
-<div class="ew-timer" data-ew-js hidden>
-<button type="button" class="ew-btn ew-start" aria-pressed="false">Start the minute</button>
-<span class="ew-note">A soft tone sounds when the minute is up.</span>
-</div>
 <p class="ew-note ew-status" role="status" aria-live="polite"></p>
 <p class="ew-q" id="ew-q">Did you come back to the centre?</p>
 <div class="ew-answers" role="group" aria-labelledby="ew-q">
