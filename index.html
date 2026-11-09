@@ -159,7 +159,7 @@ The Peace Papers</a>
   var W = 0, H = 0, dpr = 1, scale = 1, level = 0, dive = true, t0 = 0, last = 0, zq = 0, running = false;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) dive = false;
-  function resize() { var r = cv.getBoundingClientRect(); dpr = Math.min(window.devicePixelRatio || 1, 2); W = r.width; H = r.width; cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); }
+  function resize() { var r = cv.getBoundingClientRect(); dpr = Math.min(window.devicePixelRatio || 1, 3); W = r.width; H = r.width; cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); }
   var glow = (function () { var c = document.createElement('canvas'); c.width = c.height = 256; var g = c.getContext('2d'), gr = g.createRadialGradient(128, 128, 0, 128, 128, 128);
     gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(0.08, 'rgba(255,255,255,0.85)'); gr.addColorStop(0.25, 'rgba(230,228,255,0.28)'); gr.addColorStop(0.55, 'rgba(210,205,255,0.07)'); gr.addColorStop(1, 'rgba(200,200,255,0)');
     g.fillStyle = gr; g.fillRect(0, 0, 256, 256); return c; })();
@@ -173,9 +173,9 @@ The Peace Papers</a>
     for (; R >= 0.6; R /= 2) {
       var a = 1; if (R < 10) a = Math.max(0, (R - 0.6) / 9.4);
       if (R > 0.9 * W) a *= Math.max(0.08, 1 - (R - 0.9 * W) / (1.6 * W));
-      ctx.lineWidth = Math.min(2.6, Math.max(1.0, R * 0.008));
-      ctx.strokeStyle = 'rgba(190,200,235,' + (0.75 * a) + ')'; ctx.beginPath(); ctx.arc(cx, cy, R, 0, TAU); ctx.stroke();
-      ctx.strokeStyle = 'rgba(205,212,240,' + (0.85 * a) + ')'; tri(cx, cy, R); ctx.stroke();
+      ctx.lineWidth = Math.min(3, Math.max(1.2, 3 * Math.pow(R / (0.9 * W), 0.35)));
+      ctx.strokeStyle = 'rgba(190,200,235,' + (0.9 * a * Math.min(1, Math.pow(R / (0.9 * W), 0.3))) + ')'; ctx.beginPath(); ctx.arc(cx, cy, R, 0, TAU); ctx.stroke();
+      ctx.strokeStyle = 'rgba(205,212,240,' + (0.95 * a * Math.min(1, Math.pow(R / (0.9 * W), 0.3))) + ')'; tri(cx, cy, R); ctx.stroke();
     }
     var g = W * (0.11 + 0.015 * breath);
     ctx.globalCompositeOperation = 'lighter'; ctx.globalAlpha = 0.95; ctx.drawImage(glow, cx - g / 2, cy - g / 2, g, g);
@@ -211,6 +211,7 @@ The Peace Papers</a>
   cv.addEventListener('wheel', function (e) { if (!e.ctrlKey) return; e.preventDefault(); setDive(false); zq += -e.deltaY * 0.01; }, { passive: false });
   if ('IntersectionObserver' in window) { new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) start(); else stop(); }); }, { threshold: 0.05 }).observe(cv); } else start();
   window.addEventListener('resize', function () { resize(); if (!running) render(performance.now()); });
+  if ('ResizeObserver' in window) new ResizeObserver(function () { resize(); if (!running) render(performance.now()); }).observe(cv);
   resize(); if (!running) render(performance.now());
   if (reduce) { render(performance.now()); }
 })();
