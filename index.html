@@ -566,11 +566,17 @@ The Peace Papers</a>
 #dynamics .gd-state { font-variant-numeric: tabular-nums; }
 #dynamics button { font: inherit; font-size: 13px; color: #F4F5FA; background: transparent; border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; min-height: 40px; padding: 0 16px; cursor: pointer; }
 #dynamics button:focus-visible { outline: 2px solid #C9B8FF; outline-offset: 3px; }
+#dynamics .gd-scale { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 20px; }
+#dynamics .gd-scale-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #8A90A6; margin-right: 4px; }
+#dynamics .gd-scale button[aria-pressed="true"] { background: #F4F5FA; color: #0A0D16; border-color: #F4F5FA; }
+#dynamics .gd-scale-line { margin: 12px 0 0; font-size: 16px; line-height: 1.5; color: #F4F5FA; }
 @media (prefers-reduced-motion: reduce) { #dynamics .gd-dot { transition: none; } }
 </style>
 <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #8A90A6">From paper VII</p>
 <h2 id="dynamics-title" style="margin: 12px 0 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 600; font-size: 32px; line-height: 1.2; color: #F4F5FA">An interactive model of group dynamics</h2>
-<p style="margin: 14px 0 0; max-width: 760px; font-size: 17px; line-height: 1.65; color: #C3C8D6">Polycentric unity: seven circles, each centred on its neighbours' rims, so that the edge of each runs through the centre of the next and every corner of a triangle is a neighbour's centre. Each circle is a group with its triangle, the group's ego, and its centre, the witness; and each circle is also a member of the circle around it, a group of the circles within it, so the one model gives every scale, from a person in a family to a nation in the world. The light in every centre is one. They breathe. Tap one to knock it out of place: the others hold it, and it comes back.</p>
+<p style="margin: 14px 0 0; max-width: 760px; font-size: 17px; line-height: 1.65; color: #C3C8D6">Polycentric unity: seven circles, each centred on its neighbours' rims, so that the edge of each runs through the centre of the next and every corner of a triangle is a neighbour's centre. Each circle is a group with its triangle, the group's ego, and its centre, the witness; and each circle is also a member of the circle around it, a group of the circles within it, so the one model gives every scale: members within a family, families within a community, communities within nations, nations within the world. The light in every centre is one. They breathe. Tap one to knock it out of place: the others hold it, and it comes back.</p>
+<div class="gd-scale" id="gd-scale" role="group" aria-label="The scale the figure is read at"><span class="gd-scale-label">Scale</span></div>
+<p class="gd-scale-line" id="gd-scale-line" aria-live="polite"></p>
 <div class="gd-stage"><canvas id="gd-c" aria-label="Seven overlapping circles in constant gentle motion. Tapping a circle pushes it out of place and the arrangement draws it back into balance."></canvas></div>
 <div class="gd-row">
 <span class="gd-pill"><span class="gd-dot" id="gd-dot"></span><span id="gd-word">held</span></span>
@@ -584,6 +590,19 @@ The Peace Papers</a>
   const cv = document.getElementById('gd-c'), ctx = cv.getContext('2d');
   const dotEl = document.getElementById('gd-dot'), wordEl = document.getElementById('gd-word'), measEl = document.getElementById('gd-meas');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // the scale the flower is read at (Devon, 10 November 2026): the figure is the same at each; only the names change
+  const SCALES = [["Members within a family", "Each circle is a member. Together they are a family."],
+                  ["Families within a community", "Each circle is a family. Together they are a community."],
+                  ["Communities within nations", "Each circle is a community. Together they are a nation."],
+                  ["Nations within the world", "Each circle is a nation. Together they are the world."]];
+  const scaleRow = document.getElementById('gd-scale'), scaleLine = document.getElementById('gd-scale-line');
+  SCALES.forEach(([name, line], k) => {
+    const b = document.createElement('button'); b.type = 'button'; b.textContent = name; b.setAttribute('aria-pressed', k === 0 ? 'true' : 'false');
+    b.addEventListener('click', () => { scaleRow.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false')); scaleLine.textContent = line; });
+    scaleRow.appendChild(b);
+  });
+  scaleLine.textContent = SCALES[0][1];
+
   let W = 0, H = 0, R = 0, dpr = 1, lattice = false;
   const HUES = [0, 30, 55, 130, 210, 275];
   let circles = [];
