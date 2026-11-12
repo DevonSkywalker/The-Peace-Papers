@@ -86,7 +86,7 @@ The Peace Papers</a>
 .ew{max-width:1120px;margin:0 auto;padding:16px 20px 40px}
 .ew-card{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;padding:28px;border-radius:18px;background:#11151F;border:1px solid rgba(201,184,255,0.22)}
 @media (min-width:860px){.ew-card{grid-template-columns:minmax(280px,400px) minmax(0,1fr);align-items:center;gap:48px;padding:40px}}
-.ew-fig{margin:0}
+.ew-fig{margin:0}#witness [hidden]{display:none!important}.ew-switch{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:14px}.ew-choice{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.18);background:transparent;color:#C3C8D6;font:500 13px Inter,system-ui,sans-serif;cursor:pointer}.ew-choice[aria-pressed="true"]{border-color:#C9B8FF;background:rgba(201,184,255,0.12);color:#F4F5FA}.ew-figcap{margin:10px 2px 0;font-size:13px;line-height:1.55;color:#9AA0B4;text-align:center}
 .ew-fig svg{display:block;width:100%;max-width:400px;height:auto;margin:0 auto}
 .ew-frames{transform-box:view-box;transform-origin:50% 50%}
 @media (prefers-reduced-motion:no-preference){.ew-fig.ew-open .ew-frames{animation:ew-aperture 9s ease-in-out infinite}}
@@ -127,6 +127,16 @@ The Peace Papers</a>
 <circle cx="200" cy="200" r="20" fill="url(#ew-glow)"></circle>
 <circle cx="200" cy="200" r="8.5" fill="#FFFFFF"></circle>
 </svg>
+<svg class="ew-lattice" viewBox="0 0 400 400" role="img" aria-labelledby="ew-lat-title" hidden>
+<title id="ew-lat-title">A lattice of circles of one size on a dark ground, each centred on the rims of its neighbours, a faint triangle inside each and a small point of light at every centre; the colours shift round the drawing, and the middle circle is white.</title>
+<defs><radialGradient id="ew-glow-l"><stop offset="0" stop-color="#C8CDDC" stop-opacity=".5"></stop><stop offset="1" stop-color="#7E8496" stop-opacity="0"></stop></radialGradient></defs>
+<g fill="none" stroke-width="1" stroke-opacity=".32" stroke-linejoin="round"><path d="M77.9 223.5 L118.6 294.0 L37.2 294.0 Z" stroke="#58E358"/><path d="M77.9 176.5 L118.6 247.0 L37.2 247.0 Z" stroke="#84E358"/><path d="M77.9 129.5 L118.6 200.0 L37.2 200.0 Z" stroke="#B7E358"/><path d="M77.9 82.5 L118.6 153.0 L37.2 153.0 Z" stroke="#E3E358"/><path d="M118.6 247.0 L159.3 317.5 L77.9 317.5 Z" stroke="#58E384"/><path d="M118.6 200.0 L159.3 270.5 L77.9 270.5 Z" stroke="#58E358"/><path d="M118.6 153.0 L159.3 223.5 L77.9 223.5 Z" stroke="#9EE358"/><path d="M118.6 106.0 L159.3 176.5 L77.9 176.5 Z" stroke="#E3E358"/><path d="M118.6 59.0 L159.3 129.5 L77.9 129.5 Z" stroke="#E3B758"/><path d="M159.3 270.5 L200.0 341.0 L118.6 341.0 Z" stroke="#58E3B7"/><path d="M159.3 223.5 L200.0 294.0 L118.6 294.0 Z" stroke="#58E39E"/><path d="M159.3 176.5 L200.0 247.0 L118.6 247.0 Z" stroke="#58E358"/><path d="M159.3 129.5 L200.0 200.0 L118.6 200.0 Z" stroke="#E3E358"/><path d="M159.3 82.5 L200.0 153.0 L118.6 153.0 Z" stroke="#E39E58"/><path d="M159.3 35.5 L200.0 106.0 L118.6 106.0 Z" stroke="#E38458"/><path d="M200.0 294.0 L240.7 364.5 L159.3 364.5 Z" stroke="#58E3E3"/><path d="M200.0 247.0 L240.7 317.5 L159.3 317.5 Z" stroke="#58E3E3"/><path d="M200.0 200.0 L240.7 270.5 L159.3 270.5 Z" stroke="#58E3E3"/><path d="M200.0 153.0 L240.7 223.5 L159.3 223.5 Z" stroke="#E8ECF4"/><path d="M200.0 106.0 L240.7 176.5 L159.3 176.5 Z" stroke="#E35858"/><path d="M200.0 59.0 L240.7 129.5 L159.3 129.5 Z" stroke="#E35858"/><path d="M200.0 12.0 L240.7 82.5 L159.3 82.5 Z" stroke="#E35858"/><path d="M240.7 270.5 L281.4 341.0 L200.0 341.0 Z" stroke="#58B7E3"/><path d="M240.7 223.5 L281.4 294.0 L200.0 294.0 Z" stroke="#589EE3"/><path d="M240.7 176.5 L281.4 247.0 L200.0 247.0 Z" stroke="#5858E3"/><path d="M240.7 129.5 L281.4 200.0 L200.0 200.0 Z" stroke="#E358E3"/><path d="M240.7 82.5 L281.4 153.0 L200.0 153.0 Z" stroke="#E3589E"/><path d="M240.7 35.5 L281.4 106.0 L200.0 106.0 Z" stroke="#E35884"/><path d="M281.4 247.0 L322.1 317.5 L240.7 317.5 Z" stroke="#5884E3"/><path d="M281.4 200.0 L322.1 270.5 L240.7 270.5 Z" stroke="#5858E3"/><path d="M281.4 153.0 L322.1 223.5 L240.7 223.5 Z" stroke="#9E58E3"/><path d="M281.4 106.0 L322.1 176.5 L240.7 176.5 Z" stroke="#E358E3"/><path d="M281.4 59.0 L322.1 129.5 L240.7 129.5 Z" stroke="#E358B7"/><path d="M322.1 223.5 L362.8 294.0 L281.4 294.0 Z" stroke="#5858E3"/><path d="M322.1 176.5 L362.8 247.0 L281.4 247.0 Z" stroke="#8458E3"/><path d="M322.1 129.5 L362.8 200.0 L281.4 200.0 Z" stroke="#B758E3"/><path d="M322.1 82.5 L362.8 153.0 L281.4 153.0 Z" stroke="#E358E3"/></g>
+<g fill="none" stroke-width="1.6" stroke-opacity=".88"><circle cx="77.9" cy="270.5" r="47" stroke="#58E358"/><circle cx="77.9" cy="223.5" r="47" stroke="#84E358"/><circle cx="77.9" cy="176.5" r="47" stroke="#B7E358"/><circle cx="77.9" cy="129.5" r="47" stroke="#E3E358"/><circle cx="118.6" cy="294.0" r="47" stroke="#58E384"/><circle cx="118.6" cy="247.0" r="47" stroke="#58E358"/><circle cx="118.6" cy="200.0" r="47" stroke="#9EE358"/><circle cx="118.6" cy="153.0" r="47" stroke="#E3E358"/><circle cx="118.6" cy="106.0" r="47" stroke="#E3B758"/><circle cx="159.3" cy="317.5" r="47" stroke="#58E3B7"/><circle cx="159.3" cy="270.5" r="47" stroke="#58E39E"/><circle cx="159.3" cy="223.5" r="47" stroke="#58E358"/><circle cx="159.3" cy="176.5" r="47" stroke="#E3E358"/><circle cx="159.3" cy="129.5" r="47" stroke="#E39E58"/><circle cx="159.3" cy="82.5" r="47" stroke="#E38458"/><circle cx="200.0" cy="341.0" r="47" stroke="#58E3E3"/><circle cx="200.0" cy="294.0" r="47" stroke="#58E3E3"/><circle cx="200.0" cy="247.0" r="47" stroke="#58E3E3"/><circle cx="200.0" cy="200.0" r="47" stroke="#E8ECF4"/><circle cx="200.0" cy="153.0" r="47" stroke="#E35858"/><circle cx="200.0" cy="106.0" r="47" stroke="#E35858"/><circle cx="200.0" cy="59.0" r="47" stroke="#E35858"/><circle cx="240.7" cy="317.5" r="47" stroke="#58B7E3"/><circle cx="240.7" cy="270.5" r="47" stroke="#589EE3"/><circle cx="240.7" cy="223.5" r="47" stroke="#5858E3"/><circle cx="240.7" cy="176.5" r="47" stroke="#E358E3"/><circle cx="240.7" cy="129.5" r="47" stroke="#E3589E"/><circle cx="240.7" cy="82.5" r="47" stroke="#E35884"/><circle cx="281.4" cy="294.0" r="47" stroke="#5884E3"/><circle cx="281.4" cy="247.0" r="47" stroke="#5858E3"/><circle cx="281.4" cy="200.0" r="47" stroke="#9E58E3"/><circle cx="281.4" cy="153.0" r="47" stroke="#E358E3"/><circle cx="281.4" cy="106.0" r="47" stroke="#E358B7"/><circle cx="322.1" cy="270.5" r="47" stroke="#5858E3"/><circle cx="322.1" cy="223.5" r="47" stroke="#8458E3"/><circle cx="322.1" cy="176.5" r="47" stroke="#B758E3"/><circle cx="322.1" cy="129.5" r="47" stroke="#E358E3"/></g>
+<g fill="url(#ew-glow-l)"><circle cx="77.9" cy="270.5" r="7"/><circle cx="77.9" cy="223.5" r="7"/><circle cx="77.9" cy="176.5" r="7"/><circle cx="77.9" cy="129.5" r="7"/><circle cx="118.6" cy="294.0" r="7"/><circle cx="118.6" cy="247.0" r="7"/><circle cx="118.6" cy="200.0" r="7"/><circle cx="118.6" cy="153.0" r="7"/><circle cx="118.6" cy="106.0" r="7"/><circle cx="159.3" cy="317.5" r="7"/><circle cx="159.3" cy="270.5" r="7"/><circle cx="159.3" cy="223.5" r="7"/><circle cx="159.3" cy="176.5" r="7"/><circle cx="159.3" cy="129.5" r="7"/><circle cx="159.3" cy="82.5" r="7"/><circle cx="200.0" cy="341.0" r="7"/><circle cx="200.0" cy="294.0" r="7"/><circle cx="200.0" cy="247.0" r="7"/><circle cx="200.0" cy="200.0" r="7"/><circle cx="200.0" cy="153.0" r="7"/><circle cx="200.0" cy="106.0" r="7"/><circle cx="200.0" cy="59.0" r="7"/><circle cx="240.7" cy="317.5" r="7"/><circle cx="240.7" cy="270.5" r="7"/><circle cx="240.7" cy="223.5" r="7"/><circle cx="240.7" cy="176.5" r="7"/><circle cx="240.7" cy="129.5" r="7"/><circle cx="240.7" cy="82.5" r="7"/><circle cx="281.4" cy="294.0" r="7"/><circle cx="281.4" cy="247.0" r="7"/><circle cx="281.4" cy="200.0" r="7"/><circle cx="281.4" cy="153.0" r="7"/><circle cx="281.4" cy="106.0" r="7"/><circle cx="322.1" cy="270.5" r="7"/><circle cx="322.1" cy="223.5" r="7"/><circle cx="322.1" cy="176.5" r="7"/><circle cx="322.1" cy="129.5" r="7"/></g>
+<g fill="#FFFFFF"><circle cx="77.9" cy="270.5" r="2.4"/><circle cx="77.9" cy="223.5" r="2.4"/><circle cx="77.9" cy="176.5" r="2.4"/><circle cx="77.9" cy="129.5" r="2.4"/><circle cx="118.6" cy="294.0" r="2.4"/><circle cx="118.6" cy="247.0" r="2.4"/><circle cx="118.6" cy="200.0" r="2.4"/><circle cx="118.6" cy="153.0" r="2.4"/><circle cx="118.6" cy="106.0" r="2.4"/><circle cx="159.3" cy="317.5" r="2.4"/><circle cx="159.3" cy="270.5" r="2.4"/><circle cx="159.3" cy="223.5" r="2.4"/><circle cx="159.3" cy="176.5" r="2.4"/><circle cx="159.3" cy="129.5" r="2.4"/><circle cx="159.3" cy="82.5" r="2.4"/><circle cx="200.0" cy="341.0" r="2.4"/><circle cx="200.0" cy="294.0" r="2.4"/><circle cx="200.0" cy="247.0" r="2.4"/><circle cx="200.0" cy="200.0" r="2.4"/><circle cx="200.0" cy="153.0" r="2.4"/><circle cx="200.0" cy="106.0" r="2.4"/><circle cx="200.0" cy="59.0" r="2.4"/><circle cx="240.7" cy="317.5" r="2.4"/><circle cx="240.7" cy="270.5" r="2.4"/><circle cx="240.7" cy="223.5" r="2.4"/><circle cx="240.7" cy="176.5" r="2.4"/><circle cx="240.7" cy="129.5" r="2.4"/><circle cx="240.7" cy="82.5" r="2.4"/><circle cx="281.4" cy="294.0" r="2.4"/><circle cx="281.4" cy="247.0" r="2.4"/><circle cx="281.4" cy="200.0" r="2.4"/><circle cx="281.4" cy="153.0" r="2.4"/><circle cx="281.4" cy="106.0" r="2.4"/><circle cx="322.1" cy="270.5" r="2.4"/><circle cx="322.1" cy="223.5" r="2.4"/><circle cx="322.1" cy="176.5" r="2.4"/><circle cx="322.1" cy="129.5" r="2.4"/></g>
+</svg>
+<div class="ew-switch" role="group" aria-label="Choose the drawing" data-ew-js hidden><button type="button" class="ew-choice" data-fig="eye" aria-pressed="true">The eye of the witness</button><button type="button" class="ew-choice" data-fig="lattice" aria-pressed="false">The lattice</button></div>
+<p class="ew-figcap" data-for="lattice" hidden>The lattice, from paper VII: every circle is the triangle in its circle, with its own point of light, and every edge runs through a neighbour's centre. The colour is the circle's; the light is not. An image (Interpretive), not evidence.</p>
 </figure>
 <div>
 <h2 id="witness-title">The eye of the witness</h2>
@@ -167,8 +177,9 @@ The Peace Papers</a>
   function tri(cx, cy, R) { ctx.beginPath(); for (var i = 0; i < 3; i++) { var a = -Math.PI / 2 + i * TAU / 3, x = cx + R * Math.cos(a), y = cy + R * Math.sin(a); if (i) ctx.lineTo(x, y); else ctx.moveTo(x, y); } ctx.closePath(); }
   function render(ts) {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.fillStyle = '#06060b'; ctx.fillRect(0, 0, W, H);
+    if (!(W > 0) || !(H > 0)) return;   // hidden (the lattice chosen): nothing to draw, and no endless loop
     var cx = W / 2, cy = H / 2, R0 = 0.37 * W * scale, Rmax = 2.2 * W, R = R0;
-    while (R * 2 <= Rmax) R *= 2;
+    while (R > 0 && R * 2 <= Rmax) R *= 2;
     ctx.lineCap = 'round'; ctx.lineJoin = 'round';
     var breath = 0.5 + 0.5 * Math.sin((ts - t0) / 1000 * TAU / 7);
     for (; R >= 0.6; R /= 2) {
@@ -226,7 +237,8 @@ The Peace Papers</a>
 </div>
 <div class="ew-reveal" aria-live="polite">
 <p class="ew-own">What you noticed is your own report (Experienced).</p>
-<p>Coming back is the whole of it. The feeling and the thought are states; the centre is where they are seen from, and the one who comes back is the witness. The point is the singularity, π brought to a point in one person; the rings around it are the eye, I3. It is an image, not evidence (Interpretive).</p>
+<p data-for="eye">Coming back is the whole of it. The feeling and the thought are states; the centre is where they are seen from, and the one who comes back is the witness. The point is the singularity, π brought to a point in one person; the rings around it are the eye, I3. It is an image, not evidence (Interpretive).</p>
+<p data-for="lattice" hidden>Coming back is the whole of it. The feeling and the thought are states; the centre is where they are seen from, and the one who comes back is the witness. In the lattice every circle has its own point of light, π brought to a point in each, and every edge runs through a neighbour's centre. It is an image, not evidence (Interpretive).</p>
 <p>As a practice, it is one minute a day. The author reports that with repetition centring becomes automatic, the state lasts longer, and coming back after being caught, in a feeling or in a screen, comes sooner (Experienced: the author’s report). Paper I sets out how to test that.</p>
 <p>The papers map what the minute points to, and how each part of it could be tested.</p>
 <a class="ew-btn" href="#up-title">Now the papers</a>
@@ -289,6 +301,7 @@ The Peace Papers</a>
     start.setAttribute('aria-pressed', 'true');
     status.textContent = 'The minute has started.';
     var fig = document.getElementById('ec-c');
+    if (!fig || !fig.offsetParent) fig = root.querySelector('.ew-fig svg:not([hidden])');
     if (fig) { var fr = fig.getBoundingClientRect(); window.scrollBy({ top: fr.top + fr.height / 2 - window.innerHeight / 2, left: 0, behavior: 'smooth' }); }
     tick(); timer = setInterval(tick, 250);
   });
@@ -299,6 +312,24 @@ The Peace Papers</a>
       fig.classList.add('ew-open');
     });
   });
+})();
+</script>
+<script>
+(function () {
+  var root = document.getElementById('witness');
+  if (!root) return;
+  var eye = root.querySelector('.ew-fig svg:not(.ew-lattice)'), lat = root.querySelector('.ew-lattice');
+  var ec = document.getElementById('ec'), title = document.getElementById('witness-title');
+  var choices = root.querySelectorAll('.ew-choice');
+  function show(which) {
+    var L = which === 'lattice';
+    lat.toggleAttribute('hidden', !L); eye.toggleAttribute('hidden', L); if (ec) ec.hidden = L;   // svg has no hidden property: set the attribute
+    window.dispatchEvent(new Event('resize'));   // the interactive drawing measures itself again when shown
+    title.textContent = L ? 'The lattice' : 'The eye of the witness';
+    root.querySelectorAll('[data-for]').forEach(function (el) { el.hidden = el.getAttribute('data-for') !== which; });
+    choices.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-fig') === which)); });
+  }
+  choices.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-fig')); }); });
 })();
 </script>
 </section>
@@ -372,7 +403,7 @@ The Peace Papers</a>
 <div style="flex: 1 1 220px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px">
 <span style="font-family: 'JetBrains Mono', monospace; font-size: 40px; line-height: 1; color: #F4F5FA">I</span>
 <span style="display: inline-flex; align-items: center; padding: 5px 12px; border-radius: 999px; border: 1px solid rgba(156,195,255,0.45); color: #9CC3FF; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em">Working draft</span>
-<span style="font-size: 13px; line-height: 1.5; color: #8A90A6">Website version v50 · 22 pages</span>
+<span style="font-size: 13px; line-height: 1.5; color: #8A90A6">Website version v51 · 23 pages</span>
 <a href="pdf/the-peace-papers-i-arriving-at-the-centre-of-consciousness.pdf" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: #6A4CF0; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 14px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"></path><path d="M7 10l5 5 5-5"></path><path d="M5 20h14"></path></svg>Download PDF</a>
 </div>
 <div style="flex: 999 1 520px; min-width: 0">
