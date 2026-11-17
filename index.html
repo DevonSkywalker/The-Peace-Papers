@@ -243,19 +243,19 @@ The Peace Papers</a>
 <p>The papers map what the minute points to, and how each part of it could be tested.</p>
 <a class="ew-btn" href="#up-title">Now the papers</a>
 </div>
-<p style="margin:28px 0 0"><a class="ew-btn" id="ew-unity" href="#t-VII" style="background:transparent;border:1px solid rgba(255,255,255,0.22);color:#E8EAF2">Polycentric unity</a></p>
+<p style="margin:28px 0 0"><a class="ew-btn" id="ew-unity" href="#dynamics" style="background:transparent;border:1px solid rgba(255,255,255,0.22);color:#E8EAF2">Polycentric unity</a></p>
 <script>
-/* 16 November 2026: straight to paper VII. Pictures further up load as the page passes them and push the card down, so the jump is corrected until it settles. */
+/* 16 November 2026: straight to the interactive figure of polycentric unity (17 November: the figure, not the paper). Pictures further up load as the page passes them and push the card down, so the jump is corrected until it settles. */
 (function () {
   var a = document.getElementById('ew-unity'); if (!a) return;
   a.addEventListener('click', function (e) {
-    var t = document.getElementById('t-VII'); if (!t) return;
+    var t = document.getElementById('dynamics'); if (!t) return;
     e.preventDefault();
-    var card = t.closest('article') || t, n = 0;
+    var card = t, n = 0;
     card.scrollIntoView({ block: 'start' });
     var id = setInterval(function () {
       if (Math.abs(card.getBoundingClientRect().top) > 24) card.scrollIntoView({ block: 'start' });
-      if (++n >= 14) { clearInterval(id); try { history.replaceState(null, '', '#t-VII'); } catch (x) {} }
+      if (++n >= 14) { clearInterval(id); try { history.replaceState(null, '', '#dynamics'); } catch (x) {} }
     }, 250);
   });
 })();
