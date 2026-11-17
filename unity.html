@@ -141,7 +141,7 @@ p.scale-line { color: var(--fg); font-size: 16px; }
       ctx.lineWidth = 0.8; ctx.strokeStyle = col + '0.7)'; ctx.beginPath();
       for (let k = 0; k < 3; k++) { const a = Math.PI / 2 + k * 2 * Math.PI / 3; const px = c.x + r * Math.cos(-a), py = c.y + r * Math.sin(-a); k ? ctx.lineTo(px, py) : ctx.moveTo(px, py); }
       ctx.closePath(); ctx.stroke();
-      // the point of light: one light
+      // the point of light: π
       const g = ctx.createRadialGradient(c.x, c.y, 0, c.x, c.y, r * 0.22);
       g.addColorStop(0, 'rgba(255,255,255,0.55)'); g.addColorStop(1, 'rgba(255,255,255,0)');
       ctx.fillStyle = g; ctx.beginPath(); ctx.arc(c.x, c.y, r * 0.22, 0, Math.PI * 2); ctx.fill();
